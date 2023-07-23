@@ -41,6 +41,7 @@ nav > ul > li > a {
   padding-right: 0;
 }
 
+
 .navtoggle li:not(:last-child) {
   display: none;
 }
@@ -182,7 +183,7 @@ div {
 
 .button-contact {
   background-color: rgb(211, 211, 239);
-  color: #ffffff;
+  color: #fafffb;
   text-transform: uppercase;
   border: 2px solid #fffdfa;
   padding: 10px;
@@ -234,7 +235,7 @@ h4 {
 h1 {
   font-family: "Barlow Condensed", sans-serif;
   font-style: regular;
-  font-size: 32px;
+  font-size: 30px;
   font-style: Bold;
   font-weight: 700;
 }
@@ -886,7 +887,7 @@ Medium devices (640px and larger)
   }
 
   h1 {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   li {
@@ -945,7 +946,7 @@ Large devices (1024px or larger)
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   li {
