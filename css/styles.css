@@ -15,6 +15,7 @@ SemiBold 600 */
 nav > ul {
   font-family: "Barlow Condensed", sans-serif;
   font-style: light300;
+  text-transform: none;
   font-size: 17px;
   padding: 0;
   margin: 0;
@@ -23,9 +24,73 @@ nav > ul {
 nav > ul > li > a {
   font-family: "Barlow Condensed", thin, sans-serif;
   padding: 0 15px;
-  text-transform: uppercase;
-  font-size: 20px;
-  color: #ffffff;
+  text-transform: capitalize; /* Use "capitalize" to capitalize the first letter */
+  font-size: 22px;
+  color: #FAFAFA;
+}
+
+
+/* nav>ul>li>a {
+    : visited
+} */
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-align: right;
+  font-weight: 700;
+  width: 100%;
+}
+
+div.container
+{
+  margin: 0 auto;
+	padding: 1em 1em;
+	text-align: center;
+}
+
+div.container a
+{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border: 8px solid #FAFAFA;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
 .navtoggle,
@@ -40,7 +105,6 @@ nav > ul > li > a {
   font-size: 20px;
   padding-right: 0;
 }
-
 
 .navtoggle li:not(:last-child) {
   display: none;
@@ -57,7 +121,8 @@ nav > ul > li > a {
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid #ededed;
+  font-size: 18px;
+  border-top: 1px solid #FAFAFA;
 }
 
 .navtoggle.responsive li:last-child {
@@ -68,7 +133,7 @@ nav > ul > li > a {
   opacity: 0.9;
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
-  background-color: #fafffb;
+  background-color: #FAFAFA;
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -77,28 +142,22 @@ div {
   transition: [transition-property] [transition-duration]
     [transition-timing-function] [transition-delay];
 
+
+
   .button {
     display: inline-block;
-    background-color: rgb(210, 210, 237);
-    font-size: 17px;
-    text-decoration: none;
-    padding: 15px;
+    padding: 10px;
     border-radius: 0.3px;
-    border-bottom: 2.5px solid #66868f;
+    border-bottom: 2.5px solid  #e19797;
     transition: 0.2s opacity;
     margin-top: auto;
     font-family: "Barlow Condensed", sans-serif;
-  }
-
-  .button {
     top: 5px;
     font-weight: 700;
     font-size: 17px;
     font-family: "Barlow Condensed", sans-serif;
-    text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    border: 2px solid #d2d0d3ac;
     border-radius: 0.5px;
     position: relative;
     overflow: hidden;
@@ -106,14 +165,15 @@ div {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background: rgb(210, 210, 237);
+    background: #161515;
+    color: #FAFAFA;
     z-index: 10;
   }
 
   .button:hover {
-    font-size: 17px;
-    border: 1px solid #bc8dc5;
-    color: #131312d3;
+    font-size: 19px;
+    border: 5px solid #bc8dc5;
+    color: #FAFAFA;
     font-family: "Barlow Condensed", sans-serif;
   }
 
@@ -124,7 +184,7 @@ div {
     width: 0%;
     height: 100%;
     display: block;
-    background: #eaf5ef;
+    background:  rgb(129, 185, 225);
     position: absolute;
     -ms-transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
@@ -137,7 +197,7 @@ div {
     -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
     -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
     transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+  
   }
 
   .button::after {
@@ -147,7 +207,7 @@ div {
     width: 0%;
     height: 100%;
     display: block;
-    background: #bc8dc5;
+    background: #e8f987;
     position: absolute;
     -ms-transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
@@ -160,7 +220,7 @@ div {
     -moz-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
     -o-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
     transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
-    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 0px 14px rgba(255, 252, 252, 0.6);
   }
 
   .button:hover::before,
@@ -182,10 +242,10 @@ div {
 }
 
 .button-contact {
-  background-color: rgb(211, 211, 239);
-  color: #fafffb;
+  background:#161716;
+  border-bottom: 2.5px solid  #e19797;
+  color:  #FAFAFA;
   text-transform: uppercase;
-  border: 2px solid #fffdfa;
   padding: 10px;
   padding-left: 10px;
   margin-bottom: 40px;
@@ -194,10 +254,13 @@ div {
 }
 
 .button-contact:hover {
-  background-color: transparent;
-  color: #f9faf5;
+  font-size: 19px;
+  border-bottom: 2.5px solid  #e19797;
+  color: #FAFAFA;
   font-family: "Barlow Condensed", sans-serif;
 }
+
+
 
 html {
   line-height: 1.15;
@@ -214,7 +277,7 @@ html {
    */
 
 body {
-  background-color: #fff6f6;
+  background-color: #FAFAFA;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   /* Sets the font size to 16px */
@@ -293,7 +356,7 @@ p {
   line-height: 2;
   font-style: light300;
   font-size: 17px;
- 
+  text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -348,7 +411,7 @@ a:focus {
 
 a:active {
   /* Selected link */
-  color: #c2e8c5;
+  color:  rgb(129, 185, 225);
 }
 
 /**
@@ -701,9 +764,10 @@ template {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 250px;
   text-align: center;
-  padding: 30px;
+  padding: 0px;
+  margin-right: 480px;
 }
 
 .profilepic {
@@ -717,9 +781,9 @@ template {
   }
 
 header {
-  background-color: #d69aa2;
+  background-color: #9c3c5c;
   position: relative;
-  border-bottom: 3px solid #f0f0ec;
+  border-bottom: 3px solid #FAFAFA;
   box-shadow: 0px 1px 5px 0px;
   /* position: ; */
   width: 100%;
@@ -734,17 +798,6 @@ nav > ul {
   font-size: 17px;
 }
 
-/* nav>ul>li>a {
-    : visited
-} */
-
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  text-align: right;
-  font-weight: 700;
-  width: 100%;
-}
 
 .nav > li > a {
   color: #f8f8f8;
@@ -788,7 +841,7 @@ nav > ul > li > a {
 
 /* Footer styles */
 footer {
-  background-color: #b18a96;
+  background-color: #b0637d;
   color: #fffbfb;
   text-align: center;
 }
@@ -840,7 +893,6 @@ selector {
     width: 80%;
 }
 
-
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -851,6 +903,16 @@ Medium devices (640px and larger)
     padding: 10px 0 13px;
   }
 
+  h1 {
+    font-size: 14px;
+  }
+
+  .navtoggle.responsive li {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    border-top: 1px solid #FAFAFA;
+  }
   nav {
     width: auto;
     float: right;
@@ -884,10 +946,6 @@ Medium devices (640px and larger)
     width: auto;
     float: right;
     margin-top: 4px;
-  }
-
-  h1 {
-    font-size: 14px;
   }
 
   li {
@@ -931,7 +989,37 @@ Large devices (1024px or larger)
     padding: 10px 0 13px;
   }
 
+  header {
+    text-align: unset;
+    padding: 10px 0 13px;
+  }
 
+  h1 {
+    font-size: 14px;
+  }
+  
+  .navtoggle.responsive li {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    border-top: 1px solid #FAFAFA;
+  }
+  nav {
+    width: auto;
+    float: right;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
 
   .container {
     max-width: 1200px;
@@ -939,14 +1027,16 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
 
+  .logo {
+    max-width: 250px;
+    text-align: center;
+    padding: 30px;
+  }
+
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
-  }
-
-  h1 {
-    font-size: 14px;
   }
 
   li {
@@ -965,12 +1055,10 @@ Large devices (1024px or larger)
     margin-top: 0;
   }
 
-  .col-lg-5 {
+  .col-md-6 {
     width: 40%;
-  }
-
-  .col-lg-7 {
-    width: 50%;
+    padding: 10px;
+    /* margin-top: 50px; */
   }
 
   [class*="col-"] {
@@ -990,9 +1078,109 @@ X-large devices (1440px or larger)
 @media only screen and (min-width: 1440px) {
 }
 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
+
+h1 {
+  font-size: 14px;
+}
+
+li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: light300;
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+#hero span {
+  text-align: center;
+  display: block;
+}
+
+#about-page h3 {
+  margin-top: 0;
+}
+
+.col-lg-5 {
+  width: 40%;
+}
+
+.col-lg-7 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {
 }
 
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
+
+h1 {
+  font-size: 14px;
+}
+
+li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: light300;
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+#hero span {
+  text-align: center;
+  display: block;
+}
+
+#about-page h3 {
+  margin-top: 0;
+}
+
+.col-lg-5 {
+  width: 40%;
+}
+
+.col-lg-7 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
